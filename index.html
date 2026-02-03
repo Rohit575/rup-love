@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+<meta charset="UTF-8">
+<title>For Rup ❤️</title>
+<style>
+    body {
+        margin: 0;
+        height: 100vh;
+        background: linear-gradient(135deg, #ff758c, #ff7eb3);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Segoe UI', sans-serif;
+        overflow: hidden;
+        color: white;
+    }
+
+    .card {
+        background: rgba(255, 255, 255, 0.15);
+        padding: 40px;
+        border-radius: 20px;
+        text-align: center;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+
+    h1 {
+        font-size: 2.6rem;
+        margin-bottom: 10px;
+    }
+
+    p {
+        font-size: 1.2rem;
+    }
+
+    button {
+        margin-top: 20px;
+        padding: 12px 30px;
+        font-size: 1.1rem;
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+        background: #fff;
+        color: #ff4b7d;
+        transition: transform 0.2s;
+    }
+
+    button:hover {
+        transform: scale(1.1);
+    }
+
+    .heart {
+        position: absolute;
+        font-size: 24px;
+        animation: floatUp 4s linear infinite;
+    }
+
+    @keyframes floatUp {
+        0% { transform: translateY(0); opacity: 1; }
+        100% { transform: translateY(-800px); opacity: 0; }
+    }
+</style>
+</head>
+<body>
+
+<div class="card">
+    <h1>❤️ Rup ❤️</h1>
+    <p>
+        Rup, तू माझ्या आयुष्याचं<br>
+        सगळ्यात सुंदर reason आहेस 💕
+    </p>
+    <button onclick="showLove()">Click Here 😘</button>
+</div>
+
+<script>
+function showLove() {
+    alert("Rup, I Love You So Much ❤️");
+
+    for (let i = 0; i < 40; i++) {
+        let heart = document.createElement("div");
+        heart.className = "heart";
+        heart.innerHTML = "❤️";
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.bottom = "0px";
+        heart.style.color = ["#ff0000", "#ff69b4", "#ff1493"][Math.floor(Math.random()*3)];
+        heart.style.fontSize = (20 + Math.random() * 30) + "px";
+        document.body.appendChild(heart);
+
+        setTimeout(() => heart.remove(), 4000);
+    }
+}
+</script>
+
+</body>
+</html>
